@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sign in to your account">
+    <title>Professional Login Page</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #eff6ff, #e0e7ff);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #1f2937;
+        }
+
+        main {
+            width: 100%;
+            max-width: 400px;
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d4ed8;
+            font-size: 30px;
+            margin: 0 0 12px;
+        }
+
+        .welcome {
+            text-align: center;
+            color: #6b7280;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d1d5db;
+            border-radius: 7px;
+            font-size: 14px;
+            background-color: #f9fafb;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            outline: 2px solid #93c5fd;
+            border-color: #2563eb;
+            background-color: #ffffff;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+
+        .remember label {
+            margin: 0;
+            font-weight: normal;
+            color: #4b5563;
+        }
+
+        input[type="checkbox"] {
+            accent-color: #2563eb;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #1e40af;
+        }
+
+        .forgot {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 25px 0;
+        }
+
+        .register {
+            text-align: center;
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 22px;
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        footer a {
+            margin: 0 5px;
+        }
+
+        @media (max-width: 450px) {
+            main {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <h1>Sign In</h1>
+
+        <p class="welcome">
+            Welcome back! Enter your details to access your account.
+        </p>
+
+        <form action="/login" method="post">
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="name@company.com"
+                    autocomplete="username"
+                    required
+                    autofocus>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    minlength="8"
+                    required>
+            </div>
+
+            <div class="remember">
+                <input
+                    type="checkbox"
+                    id="remember"
+                    name="remember"
+                    value="yes">
+                <label for="remember">Keep me signed in</label>
+            </div>
+
+            <button type="submit">Sign In</button>
+
+            <p class="forgot">
+                <a href="/forgot-password">Forgot your password?</a>
+            </p>
+
+        </form>
+
+        <hr>
+
+        <p class="register">
+            New here?
+            <a href="/register">Create an account</a>
+        </p>
+    </main>
+
+    <footer>
+        <p>
+            <a href="/privacy">Privacy Policy</a> |
+            <a href="/terms">Terms of Service</a> |
+            <a href="/help">Help</a>
+        </p>
+    </footer>
+
+</body>
+</html>
